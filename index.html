@@ -5,27 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Iniciativa Reconciliación Casanare</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    #intro-overlay {
-      position: fixed; inset: 0; background: #1a5c2a;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      z-index: 9999; animation: fadeOutOverlay 0.8s ease 3s forwards;
-    }
-    #intro-overlay img { width: 140px; height: 140px; object-fit: contain; border-radius: 50%; animation: zoomIn 0.8s ease forwards; }
-    #intro-overlay h1 { color: white; font-family: 'Segoe UI', sans-serif; font-size: 1.6rem; text-align: center; margin-top: 20px; padding: 0 20px; opacity: 0; animation: slideUp 0.8s ease 0.5s forwards; }
-    #intro-overlay p  { color: #ffd700; font-family: 'Segoe UI', sans-serif; font-size: 1rem; margin-top: 8px; opacity: 0; animation: slideUp 0.8s ease 0.9s forwards; }
-    @keyframes zoomIn  { from { transform: scale(0.3); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    @keyframes fadeOutOverlay { to { opacity: 0; pointer-events: none; } }
-  </style>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <!-- ANIMACIÓN DE ENTRADA -->
-  <div id="intro-overlay">
-    <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo" />
-    <h1>Iniciativa Reconciliación Casanare</h1>
-    <p>Comité de Impulso · Yopal, Casanare</p>
+  <!-- PANTALLA DE ENTRADA -->
+  <div id="pantalla-entrada">
+    <div class="entrada-contenido">
+      <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo IRC" class="entrada-logo" />
+      <h1 class="entrada-titulo">Iniciativa Reconciliación Casanare</h1>
+      <p class="entrada-lema">"Del Balazo, al Abrazo"</p>
+      <div class="entrada-barra"></div>
+    </div>
   </div>
 
   <!-- HEADER -->
@@ -39,105 +30,96 @@
     </div>
   </header>
 
-  <!-- LAYOUT PRINCIPAL -->
+  <!-- LAYOUT -->
   <div class="layout">
 
-    <!-- SIDEBAR IZQUIERDO -->
+    <!-- SIDEBAR -->
     <aside class="sidebar">
       <nav>
-        <a href="#" class="nav-link active" onclick="mostrarSeccion('publicaciones', this)">🏠 Inicio</a>
+        <a href="#" class="nav-link active" onclick="mostrarSeccion('inicio', this)">🏠 Inicio</a>
         <a href="#" class="nav-link" onclick="mostrarSeccion('nosotros', this)">👥 Nosotros</a>
         <a href="#" class="nav-link" onclick="mostrarSeccion('mision', this)">🎯 Misión y Visión</a>
-        <a href="#" class="nav-link" onclick="mostrarSeccion('acciones', this)">⚡ Acciones</a>
+        <a href="#" class="nav-link" onclick="mostrarSeccion('ejes', this)">⚡ 4 Ejes</a>
+        <a href="#" class="nav-link" onclick="mostrarSeccion('alianzas', this)">🤝 Alianzas</a>
+        <a href="#" class="nav-link" onclick="mostrarSeccion('acto', this)">🕊️ Acto Reconciliación</a>
+        <a href="#" class="nav-link" onclick="mostrarSeccion('acciones', this)">📋 Acciones</a>
         <a href="#" class="nav-link" onclick="mostrarSeccion('organigrama', this)">🗂️ Organigrama</a>
         <a href="#" class="nav-link" onclick="mostrarSeccion('contacto', this)">📞 Contacto</a>
       </nav>
     </aside>
 
-    <!-- CONTENIDO PRINCIPAL -->
+    <!-- CONTENIDO -->
     <main class="contenido">
 
-      <!-- PUBLICACIONES (visible por defecto) -->
-      <section id="sec-publicaciones" class="seccion-panel activa">
-        <h2 class="seccion-titulo">Publicaciones</h2>
-        <div class="feed">
+      <!-- ===== INICIO ===== -->
+      <section id="sec-inicio" class="seccion-panel activa">
 
-          <!-- Publicación 1 -->
-          <div class="post">
-            <div class="post-header">
-              <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo" class="post-avatar" />
-              <div>
-                <strong>Iniciativa Reconciliación Casanare</strong>
-                <span class="post-lugar">Yopal, Casanare</span>
-              </div>
+        <!-- HERO con fondo rojo/verde -->
+        <div class="hero-inicio">
+          <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo IRC" class="hero-inicio-logo" />
+          <div class="hero-inicio-texto">
+            <h2>Iniciativa Reconciliación Casanare</h2>
+            <p class="hero-subtitulo">La Asociación de Impulso a la Iniciativa de Reconciliación en Casanare (IRC)</p>
+            <div class="hero-datos">
+              <span>📅 Fundada: <strong>25 de marzo de 2025</strong></span>
+              <span>📋 Inscrita C.C.: <strong>04 de abril de 2025</strong></span>
+              <span>🏛️ NIT: <strong>901939991-3</strong></span>
+              <span>📍 Calle 15 N 18-13 Ofc. 111, Yopal</span>
+              <span>⏳ Vigente hasta: <strong>25 de febrero de 2029</strong></span>
+              <span>🏛️ Vigilada por: <strong>Gobernación de Casanare</strong></span>
             </div>
-            <p class="post-texto">Socializando con los diferentes parlamentarios el tema del proceso de reconciliación en Yopal.</p>
-            <div class="post-fotos fotos-3">
-              <img src="imagenes/publicacion1/WhatsApp Image 2026-03-23 at 2.05.21 PM (3).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
-              <img src="imagenes/publicacion1/WhatsApp Image 2026-03-23 at 2.05.22 PM.jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
-              <img src="imagenes/publicacion1/WhatsApp Image 2026-03-23 at 2.05.22 PM (1).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
-            </div>
+            <p class="hero-desc">Buscamos promover la paz, la justicia y la reconciliación en la región, a través del diálogo con ex integrantes de las ACC, AUC, BVA, FARC-EP y algunos miembros de la fuerza pública, la participación ciudadana y la construcción de memoria histórica, con el fin de sanar las heridas del pasado y construir un futuro más justo y equitativo para todos los habitantes de Casanare.</p>
           </div>
-
-          <!-- Publicación 2 -->
-          <div class="post">
-            <div class="post-header">
-              <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo" class="post-avatar" />
-              <div>
-                <strong>Iniciativa Reconciliación Casanare</strong>
-                <span class="post-lugar">Orocué, Casanare</span>
-              </div>
-            </div>
-            <p class="post-texto">En Orocué con los compañeros de la IRC y los diferentes líderes de víctimas y el concejal Conde.</p>
-            <div class="post-fotos fotos-3">
-              <img src="imagenes/publicacion2/WhatsApp Image 2026-03-23 at 2.05.21 PM.jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
-              <img src="imagenes/publicacion2/WhatsApp Image 2026-03-23 at 2.05.21 PM (1).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
-              <img src="imagenes/publicacion2/WhatsApp Image 2026-03-23 at 2.05.21 PM (2).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
-            </div>
-          </div>
-
-          <!-- Publicación 3 -->
-          <div class="post">
-            <div class="post-header">
-              <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo" class="post-avatar" />
-              <div>
-                <strong>Iniciativa Reconciliación Casanare</strong>
-                <span class="post-lugar">Casanare</span>
-              </div>
-            </div>
-            <p class="post-texto">Con los directivos de la JEP en Casanare.</p>
-            <div class="post-fotos fotos-1">
-              <img src="imagenes/publicacion3/WhatsApp Image 2026-03-23 at 2.05.17 PM (3).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
-            </div>
-          </div>
-
-          <!-- Publicación 4 -->
-          <div class="post">
-            <div class="post-header">
-              <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo" class="post-avatar" />
-              <div>
-                <strong>Iniciativa Reconciliación Casanare</strong>
-                <span class="post-lugar">Paz de Ariporo · Hato Corozal, Casanare</span>
-              </div>
-            </div>
-            <p class="post-texto">Con los líderes de las diferentes mesas de víctimas en Paz de Ariporo sobre la iniciativa Reconciliación Casanare y Hato Corozal con la concejal Luz.</p>
-            <div class="post-fotos fotos-3">
-              <img src="imagenes/publicacion4/WhatsApp Image 2026-03-23 at 2.05.17 PM.jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
-              <img src="imagenes/publicacion4/WhatsApp Image 2026-03-23 at 2.05.17 PM (1).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
-              <img src="imagenes/publicacion4/WhatsApp Image 2026-03-23 at 2.05.17 PM (2).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
-            </div>
-          </div>
-
         </div>
+
+        <!-- OBJETIVO -->
+        <div class="objetivo-box">
+          <h3>🎯 Nuestro Objetivo</h3>
+          <p>Sanar las heridas del pasado y construir un futuro más justo y equitativo para todos los habitantes de Casanare, impulsando el perdón recíproco, la verdad y la no repetición de la violencia.</p>
+        </div>
+
+        <!-- INFO EXTRA -->
+        <div class="info-grid">
+          <div class="info-card">
+            <h4>🤝 Objeto Social</h4>
+            <p>Generar las gestiones y recomendaciones necesarias para alcanzar la reconciliación de toda la sociedad casanareña, víctima del conflicto armado, animando el perdón sincero, la búsqueda de personas desaparecidas y propiciando un relato total de la verdad de todos los hechos violentos.</p>
+          </div>
+          <div class="info-card">
+            <h4>🕊️ Nuestro Propósito</h4>
+            <p>Impulsar todas las actividades necesarias para asegurar las condiciones de paz duradera y sin violencia, en beneficio de todos y las futuras generaciones, para vivir juntos en armonía con inclusión y equidad en el desarrollo social y económico sostenible.</p>
+          </div>
+          <div class="info-card">
+            <h4>⚖️ Reconciliación</h4>
+            <p>Socializar con todas las organizaciones de víctimas la necesidad urgente de avanzar en el reconocimiento de la verdad, reparación y no repetición, mediante un propósito urgente de reconciliación que permita perder el temor a exigir la veracidad de los hechos violentos.</p>
+          </div>
+          <div class="info-card">
+            <h4>🏛️ Consejo de Paz</h4>
+            <p>Impulsar la convocatoria del Consejo Departamental de Paz, Reconciliación y Convivencia de Casanare, para articular todos los instrumentos legales y financieros existentes para el logro del mandato constitucional que define la paz como un derecho y un deber de obligatorio cumplimiento.</p>
+          </div>
+        </div>
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="pie-pagina">
+          <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo" class="pie-logo" />
+          <p>Iniciativa Reconciliación Casanare &mdash; NIT. 901939991-3</p>
+          <p>Calle 15 N 18-13 Ofc. 111 · Yopal, Casanare</p>
+          <div class="pie-redes">
+            <a href="https://www.facebook.com/share/19eRS6Ymhw/" target="_blank">📘 Facebook</a>
+            <a href="mailto:reconciliacioncasanare@gmail.com">✉️ reconciliacioncasanare@gmail.com</a>
+            <a href="https://wa.me/573214503377" target="_blank">💬 WhatsApp</a>
+          </div>
+          <p class="pie-copy">© 2025 IRC · Todos los derechos reservados</p>
+        </footer>
+
       </section>
 
-      <!-- NOSOTROS -->
+      <!-- ===== NOSOTROS ===== -->
       <section id="sec-nosotros" class="seccion-panel">
         <h2 class="seccion-titulo">Quiénes Somos</h2>
-        <p>La iniciativa Reconciliación Casanare busca promover la paz, la justicia y la reconciliación en la región, a través del diálogo con ex integrantes de las ACC, AUC, BVA, FARC-EP, y algunos miembros de la fuerza pública, la participación ciudadana y la construcción de memoria histórica.</p>
+        <p style="color:rgba(255,255,255,0.92); line-height:1.8; font-size:0.97rem;">La iniciativa Reconciliación Casanare busca promover la paz, la justicia y la reconciliación en la región, a través del diálogo con ex integrantes de las ACC, AUC, BVA, FARC-EP, y algunos miembros de la fuerza pública, la participación ciudadana y la construcción de memoria histórica.</p>
       </section>
 
-      <!-- MISIÓN Y VISIÓN -->
+      <!-- ===== MISIÓN Y VISIÓN ===== -->
       <section id="sec-mision" class="seccion-panel">
         <div class="mv-grid">
           <div class="mv-card">
@@ -153,7 +135,7 @@
         </div>
       </section>
 
-      <!-- ACCIONES -->
+      <!-- ===== ACCIONES ===== -->
       <section id="sec-acciones" class="seccion-panel">
         <h2 class="seccion-titulo">Nuestras Acciones</h2>
         <div class="acciones-grid">
@@ -168,7 +150,7 @@
         </div>
       </section>
 
-      <!-- ORGANIGRAMA -->
+      <!-- ===== ORGANIGRAMA ===== -->
       <section id="sec-organigrama" class="seccion-panel">
         <h2 class="seccion-titulo">Organigrama</h2>
         <div class="org-wrap">
@@ -203,20 +185,221 @@
         </div>
       </section>
 
-      <!-- CONTACTO -->
+      <!-- ===== 4 EJES FUNDAMENTALES ===== -->
+      <section id="sec-ejes" class="seccion-panel">
+        <h2 class="seccion-titulo">⚡ 4 Ejes Fundamentales</h2>
+        <p style="color:rgba(255,255,255,0.85); margin-bottom:24px; font-size:0.95rem; line-height:1.7;">
+          La Iniciativa Reconciliación Casanare estructura su trabajo en cuatro ejes estratégicos que guían todas sus acciones hacia la paz duradera en la región.
+        </p>
+        <div class="ejes-grid">
+          <div class="eje-card">
+            <div class="eje-num">1</div>
+            <h3>Socialización con Entidades y Organizaciones</h3>
+            <p>Diálogo y socialización con entidades gubernamentales, organizaciones sociales, universidades, gremios y comunidades para dar a conocer la iniciativa y construir alianzas estratégicas en pro de la reconciliación.</p>
+          </div>
+          <div class="eje-card">
+            <div class="eje-num">2</div>
+            <h3>Segundo Acto de Reconciliación</h3>
+            <p>Realización del segundo acto de reconciliación con excomandantes de las ACC, AUC, BVA y FARC-EP, como gesto simbólico y real de perdón, verdad y compromiso con la no repetición de la violencia en Casanare.</p>
+          </div>
+          <div class="eje-card">
+            <div class="eje-num">3</div>
+            <h3>Encuentro entre Victimarios y Víctimas</h3>
+            <p>Espacios de encuentro entre victimarios y víctimas con acompañamiento psicosocial y jurídico, en alianza con universidades, para sanar heridas, construir verdad y avanzar en procesos de reparación integral.</p>
+          </div>
+          <div class="eje-card">
+            <div class="eje-num">4</div>
+            <h3>Proyectos Productivos</h3>
+            <p>Desarrollo de proyectos productivos conjuntos entre victimarios y víctimas: granjas autosostenibles, producción láctea, ganadería y otras iniciativas económicas que generen convivencia y desarrollo sostenible.</p>
+          </div>
+        </div>
+        <div class="ley-box">
+          <h3>⚖️ Marco Legal — Ley 975 de 2005 (Ley de Justicia y Paz)</h3>
+          <div class="ley-articulos">
+            <div class="ley-art"><strong>Art. 1</strong> Facilitar procesos de paz y reincorporación, garantizando verdad, justicia y reparación a las víctimas.</div>
+            <div class="ley-art"><strong>Art. 4</strong> El Estado debe promover la reconciliación, garantizar los derechos de las víctimas y proporcionarles asistencia.</div>
+            <div class="ley-art"><strong>Art. 5</strong> La sociedad civil tiene un papel fundamental; el Estado promoverá su participación activa en los procesos de paz.</div>
+            <div class="ley-art"><strong>Art. 6</strong> El Estado garantiza la seguridad de quienes participen en los procesos de paz y reconciliación.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ALIANZAS ===== -->
+      <section id="sec-alianzas" class="seccion-panel">
+        <h2 class="seccion-titulo">🤝 Alianzas Estratégicas</h2>
+        <p style="color:rgba(255,255,255,0.85); margin-bottom:24px; font-size:0.95rem; line-height:1.7;">
+          La IRC ha socializado su iniciativa con entidades y organizaciones a nivel nacional, departamental, académico y social, construyendo una red de aliados comprometidos con la paz en Casanare.
+        </p>
+        <div class="alianzas-grid">
+          <div class="alianza-card">
+            <h3>🏛️ Nivel Nacional</h3>
+            <ul>
+              <li>Congreso de la República</li>
+              <li>Cámara de Representantes</li>
+              <li>Cámara de Comercio</li>
+              <li>Directora de Implementación de Acuerdos de Paz</li>
+              <li>Centro de Memoria Histórica</li>
+              <li>Ex Comisionado Danilo Rueda</li>
+            </ul>
+          </div>
+          <div class="alianza-card">
+            <h3>🎓 Universidades</h3>
+            <ul>
+              <li>Universidad de Los Andes</li>
+              <li>Unitrópico</li>
+              <li>UPTC</li>
+              <li>Universidad La Gran Colombia</li>
+              <li>Unisangil</li>
+              <li>Uniminuto de Dios</li>
+              <li>SENA</li>
+              <li>Comfacasanare</li>
+            </ul>
+          </div>
+          <div class="alianza-card">
+            <h3>🏢 Nivel Departamental</h3>
+            <ul>
+              <li>Plenaria Asamblea Departamental</li>
+              <li>Plenaria Concejo de Yopal</li>
+              <li>Alcaldía de Yopal</li>
+              <li>Gobernación de Casanare</li>
+              <li>Jueces de Paz</li>
+              <li>Plan Departamental de Paz</li>
+              <li>Mesa Departamental de Víctimas</li>
+              <li>Centro de Memoria Histórica</li>
+            </ul>
+          </div>
+          <div class="alianza-card">
+            <h3>👥 Gremios y Organizaciones</h3>
+            <ul>
+              <li>Periodistas</li>
+              <li>Agricultores</li>
+              <li>Comerciantes</li>
+              <li>Organizaciones de Víctimas</li>
+              <li>Organizaciones Sociales y Campesinas</li>
+              <li>Transportadores</li>
+              <li>Consejo de Juventudes</li>
+            </ul>
+          </div>
+          <div class="alianza-card">
+            <h3>🗺️ Otros Departamentos</h3>
+            <ul>
+              <li>Plenaria Asamblea del Meta</li>
+              <li>Concejo de Villavicencio</li>
+              <li>Historiadores de Casanare</li>
+              <li>Líderes de Víctimas de Boyacá</li>
+              <li>Comisión de Paz del Congreso</li>
+            </ul>
+          </div>
+          <div class="alianza-card">
+            <h3>🌐 Entidades Especializadas</h3>
+            <ul>
+              <li>Agencia Nacional de Tierras</li>
+              <li>Agencia de Restitución de Tierras</li>
+              <li>Comisionado de Paz</li>
+              <li>Comisión de DDHH del Senado</li>
+              <li>Comisión Legal de Paz</li>
+              <li>JEP (Jurisdicción Especial para la Paz)</li>
+              <li>ONU</li>
+              <li>OEA</li>
+            </ul>
+          </div>
+          <div class="alianza-card alianza-full">
+            <h3>✝️ Otros Actores</h3>
+            <ul class="alianza-horizontal">
+              <li>Iglesias Cristianas y Católicas</li>
+              <li>Victimarios en Cómbita y La Picota</li>
+              <li>Reunión en La Picota con excombatientes MAP OEA</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ACTO DE RECONCILIACIÓN ===== -->
+      <section id="sec-acto" class="seccion-panel">
+        <h2 class="seccion-titulo">🕊️ Acto de Reconciliación</h2>
+        <div class="acto-intro">
+          <p>El segundo Acto de Reconciliación reúne a excomandantes de los diferentes grupos armados que operaron en Casanare, en un gesto histórico de perdón, verdad y compromiso con la paz.</p>
+          <div class="lema-box">"Del Balazo, al Abrazo"</div>
+        </div>
+        <div class="grupos-grid">
+          <div class="grupo-card acc">
+            <h3>ACC</h3>
+            <div class="comandante">
+              <span class="cmd-nombre">Héctor José Buitrago</span>
+              <span class="cmd-alias">alias "El Viejo"</span>
+            </div>
+            <div class="comandante">
+              <span class="cmd-nombre">Héctor Germán Buitrago</span>
+              <span class="cmd-alias">alias "Martín Llanos"</span>
+            </div>
+          </div>
+          <div class="grupo-card auc">
+            <h3>AUC</h3>
+            <div class="comandante">
+              <span class="cmd-nombre">Manuel de Jesús Pirabán</span>
+              <span class="cmd-alias">alias "Jorge Pirata"</span>
+            </div>
+            <div class="comandante">
+              <span class="cmd-nombre">José Baldomero Linares</span>
+              <span class="cmd-alias">alias "Guillermo Torres"</span>
+            </div>
+          </div>
+          <div class="grupo-card bva">
+            <h3>BVA</h3>
+            <div class="comandante">
+              <span class="cmd-nombre">Miguel Ángel Mejía</span>
+              <span class="cmd-alias">alias "Pablo"</span>
+            </div>
+            <div class="comandante">
+              <span class="cmd-nombre">José Luis Mejía</span>
+              <span class="cmd-alias">alias "Lucas"</span>
+            </div>
+            <div class="comandante">
+              <span class="cmd-nombre">Orlando Villa Zapata</span>
+              <span class="cmd-alias">alias "Rubén"</span>
+            </div>
+          </div>
+          <div class="grupo-card farc">
+            <h3>FARC-EP</h3>
+            <div class="comandante">
+              <span class="cmd-nombre">Pablo Catatumbo Torres Victoria</span>
+            </div>
+            <div class="comandante">
+              <span class="cmd-nombre">Wilmar Antonio Marín Cano</span>
+              <span class="cmd-alias">alias "Hugo 22"</span>
+            </div>
+            <div class="comandante">
+              <span class="cmd-nombre">Bernardo Mosquera Machado</span>
+              <span class="cmd-alias">alias "Negro Antonio"</span>
+            </div>
+            <div class="comandante">
+              <span class="cmd-nombre">Nelson Quintero</span>
+              <span class="cmd-alias">alias "Angarilla"</span>
+            </div>
+            <div class="comandante">
+              <span class="cmd-nombre">Arnulfo Ninco</span>
+              <span class="cmd-alias">alias "César"</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACTO ===== -->
       <section id="sec-contacto" class="seccion-panel">
         <h2 class="seccion-titulo">Contáctanos</h2>
         <div class="contacto-info">
           <p>📍 Calle 15 No. 18-13 Ofc. 111 · Yopal, Casanare</p>
           <p>📞 <a href="tel:3214503377">321 450 3377</a></p>
+          <p>📞 <a href="tel:3238269972">323 826 9972</a></p>
+          <p>📞 <a href="tel:3107852178">310 785 2178</a></p>
           <p>💬 <a href="https://wa.me/573214503377" target="_blank">WhatsApp: +57 321 450 3377</a></p>
           <p>✉️ <a href="mailto:reconciliacioncasanare@gmail.com">reconciliacioncasanare@gmail.com</a></p>
-          <p>👤 Yohany García · Representante Legal</p>
+          <p>👤 Yohany García Mosquera · Representante Legal</p>
           <div class="footer-redes">
             <a href="https://www.facebook.com/share/19eRS6Ymhw/" target="_blank">📘 Facebook</a>
             <a href="https://www.instagram.com" target="_blank">📷 Instagram</a>
           </div>
-          <p class="footer-nit">NIT. 901939991-3</p>
+          <p class="footer-nit">NIT. 901939991-3 · Inscripción No. S0505308</p>
         </div>
       </section>
 
@@ -229,26 +412,7 @@
     <img id="lightbox-img" src="" alt="Imagen ampliada" onclick="event.stopPropagation()" />
   </div>
 
-  <script>
-    function mostrarSeccion(id, el) {
-      event.preventDefault();
-      document.querySelectorAll('.seccion-panel').forEach(s => s.classList.remove('activa'));
-      document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
-      document.getElementById('sec-' + id).classList.add('activa');
-      el.classList.add('active');
-    }
-    function abrirLightbox(src) {
-      document.getElementById('lightbox-img').src = src;
-      document.getElementById('lightbox').style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
-    function cerrarLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-      document.getElementById('lightbox-img').src = '';
-      document.body.style.overflow = '';
-    }
-    document.addEventListener('keydown', e => { if(e.key === 'Escape') cerrarLightbox(); });
-  </script>
+  <script src="js/app.js"></script>
 
 </body>
 </html>
