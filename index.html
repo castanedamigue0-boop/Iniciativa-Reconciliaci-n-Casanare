@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciativa Reconciliación Casanare</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    #intro-overlay {
+      position: fixed; inset: 0; background: #1a5c2a;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 9999; animation: fadeOutOverlay 0.8s ease 3s forwards;
+    }
+    #intro-overlay img { width: 140px; height: 140px; object-fit: contain; border-radius: 50%; animation: zoomIn 0.8s ease forwards; }
+    #intro-overlay h1 { color: white; font-family: 'Segoe UI', sans-serif; font-size: 1.6rem; text-align: center; margin-top: 20px; padding: 0 20px; opacity: 0; animation: slideUp 0.8s ease 0.5s forwards; }
+    #intro-overlay p  { color: #ffd700; font-family: 'Segoe UI', sans-serif; font-size: 1rem; margin-top: 8px; opacity: 0; animation: slideUp 0.8s ease 0.9s forwards; }
+    @keyframes zoomIn  { from { transform: scale(0.3); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes fadeOutOverlay { to { opacity: 0; pointer-events: none; } }
+  </style>
+</head>
+<body>
+
+  <!-- ANIMACIÓN DE ENTRADA -->
+  <div id="intro-overlay">
+    <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo" />
+    <h1>Iniciativa Reconciliación Casanare</h1>
+    <p>Comité de Impulso · Yopal, Casanare</p>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo" class="logo" />
+      <div class="header-text">
+        <h1>Iniciativa Reconciliación Casanare</h1>
+        <p>Comité de Impulso · Yopal, Casanare &nbsp;|&nbsp; NIT. 901939991-3</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- LAYOUT PRINCIPAL -->
+  <div class="layout">
+
+    <!-- SIDEBAR IZQUIERDO -->
+    <aside class="sidebar">
+      <nav>
+        <a href="#" class="nav-link active" onclick="mostrarSeccion('publicaciones', this)">🏠 Inicio</a>
+        <a href="#" class="nav-link" onclick="mostrarSeccion('nosotros', this)">👥 Nosotros</a>
+        <a href="#" class="nav-link" onclick="mostrarSeccion('mision', this)">🎯 Misión y Visión</a>
+        <a href="#" class="nav-link" onclick="mostrarSeccion('acciones', this)">⚡ Acciones</a>
+        <a href="#" class="nav-link" onclick="mostrarSeccion('organigrama', this)">🗂️ Organigrama</a>
+        <a href="#" class="nav-link" onclick="mostrarSeccion('contacto', this)">📞 Contacto</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+
+      <!-- PUBLICACIONES (visible por defecto) -->
+      <section id="sec-publicaciones" class="seccion-panel activa">
+        <h2 class="seccion-titulo">Publicaciones</h2>
+        <div class="feed">
+
+          <!-- Publicación 1 -->
+          <div class="post">
+            <div class="post-header">
+              <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo" class="post-avatar" />
+              <div>
+                <strong>Iniciativa Reconciliación Casanare</strong>
+                <span class="post-lugar">Yopal, Casanare</span>
+              </div>
+            </div>
+            <p class="post-texto">Socializando con los diferentes parlamentarios el tema del proceso de reconciliación en Yopal.</p>
+            <div class="post-fotos fotos-3">
+              <img src="imagenes/publicacion1/WhatsApp Image 2026-03-23 at 2.05.21 PM (3).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
+              <img src="imagenes/publicacion1/WhatsApp Image 2026-03-23 at 2.05.22 PM.jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
+              <img src="imagenes/publicacion1/WhatsApp Image 2026-03-23 at 2.05.22 PM (1).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
+            </div>
+          </div>
+
+          <!-- Publicación 2 -->
+          <div class="post">
+            <div class="post-header">
+              <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo" class="post-avatar" />
+              <div>
+                <strong>Iniciativa Reconciliación Casanare</strong>
+                <span class="post-lugar">Orocué, Casanare</span>
+              </div>
+            </div>
+            <p class="post-texto">En Orocué con los compañeros de la IRC y los diferentes líderes de víctimas y el concejal Conde.</p>
+            <div class="post-fotos fotos-3">
+              <img src="imagenes/publicacion2/WhatsApp Image 2026-03-23 at 2.05.21 PM.jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
+              <img src="imagenes/publicacion2/WhatsApp Image 2026-03-23 at 2.05.21 PM (1).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
+              <img src="imagenes/publicacion2/WhatsApp Image 2026-03-23 at 2.05.21 PM (2).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
+            </div>
+          </div>
+
+          <!-- Publicación 3 -->
+          <div class="post">
+            <div class="post-header">
+              <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo" class="post-avatar" />
+              <div>
+                <strong>Iniciativa Reconciliación Casanare</strong>
+                <span class="post-lugar">Casanare</span>
+              </div>
+            </div>
+            <p class="post-texto">Con los directivos de la JEP en Casanare.</p>
+            <div class="post-fotos fotos-1">
+              <img src="imagenes/publicacion3/WhatsApp Image 2026-03-23 at 2.05.17 PM (3).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
+            </div>
+          </div>
+
+          <!-- Publicación 4 -->
+          <div class="post">
+            <div class="post-header">
+              <img src="imagenes/logo/WhatsApp Image 2026-03-23 at 10.44.20 AM (1).jpeg" alt="Logo" class="post-avatar" />
+              <div>
+                <strong>Iniciativa Reconciliación Casanare</strong>
+                <span class="post-lugar">Paz de Ariporo · Hato Corozal, Casanare</span>
+              </div>
+            </div>
+            <p class="post-texto">Con los líderes de las diferentes mesas de víctimas en Paz de Ariporo sobre la iniciativa Reconciliación Casanare y Hato Corozal con la concejal Luz.</p>
+            <div class="post-fotos fotos-3">
+              <img src="imagenes/publicacion4/WhatsApp Image 2026-03-23 at 2.05.17 PM.jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
+              <img src="imagenes/publicacion4/WhatsApp Image 2026-03-23 at 2.05.17 PM (1).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
+              <img src="imagenes/publicacion4/WhatsApp Image 2026-03-23 at 2.05.17 PM (2).jpeg" alt="foto" onclick="abrirLightbox(this.src)" />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- NOSOTROS -->
+      <section id="sec-nosotros" class="seccion-panel">
+        <h2 class="seccion-titulo">Quiénes Somos</h2>
+        <p>La iniciativa Reconciliación Casanare busca promover la paz, la justicia y la reconciliación en la región, a través del diálogo con ex integrantes de las ACC, AUC, BVA, FARC-EP, y algunos miembros de la fuerza pública, la participación ciudadana y la construcción de memoria histórica.</p>
+      </section>
+
+      <!-- MISIÓN Y VISIÓN -->
+      <section id="sec-mision" class="seccion-panel">
+        <div class="mv-grid">
+          <div class="mv-card">
+            <div class="mv-icon">🎯</div>
+            <h3>Misión</h3>
+            <p>La Mesa de Reconciliación de Casanare trabaja para promover la paz, la justicia y la reconciliación en la región, a través del diálogo, la participación ciudadana y la construcción de memoria histórica, con el fin de sanar las heridas del pasado y construir un futuro más justo y equitativo para todos.</p>
+          </div>
+          <div class="mv-card">
+            <div class="mv-icon">🕊️</div>
+            <h3>Visión</h3>
+            <p>La Mesa de Reconciliación de Casanare aspira a ser un referente regional en la promoción de la paz y la reconciliación, reconocida por su compromiso con la verdad, la justicia y la memoria histórica. Buscamos que Casanare sea un territorio de paz, donde las comunidades puedan vivir en armonía y donde los derechos humanos sean respetados y protegidos.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACCIONES -->
+      <section id="sec-acciones" class="seccion-panel">
+        <h2 class="seccion-titulo">Nuestras Acciones</h2>
+        <div class="acciones-grid">
+          <div class="accion-item">🤝 Diálogo y participación ciudadana</div>
+          <div class="accion-item">📖 Construcción de memoria histórica</div>
+          <div class="accion-item">⚖️ Promoción de la justicia y la verdad</div>
+          <div class="accion-item">🌱 Fortalecimiento de la cohesión social</div>
+          <div class="accion-item">🕊️ Realización del Acto de Reconciliación con ex integrantes de las ACC, AUC, BVA, FARC-EP y algunos miembros de la fuerza pública</div>
+        </div>
+        <div class="compromiso">
+          <strong>Nuestro Compromiso:</strong> Trabajar con las comunidades, organizaciones y entidades gubernamentales para construir un territorio de paz, donde los derechos humanos sean respetados y protegidos.
+        </div>
+      </section>
+
+      <!-- ORGANIGRAMA -->
+      <section id="sec-organigrama" class="seccion-panel">
+        <h2 class="seccion-titulo">Organigrama</h2>
+        <div class="org-wrap">
+          <div class="org-nivel">
+            <div class="org-box verde">Director Ejecutivo<br/><small>Yohany García</small></div>
+            <div class="org-box gris">Asesora Contable<br/><small>Consuelo Niño</small></div>
+          </div>
+          <div class="org-nivel"><div class="org-box naranja">Directiva</div></div>
+          <div class="org-nivel">
+            <div class="org-box verde">Presidente<br/><small>William Sánchez</small></div>
+            <div class="org-box verde">Vicepresidente<br/><small>Jacobo Rivera</small></div>
+          </div>
+          <div class="org-nivel"><div class="org-box verde">Vocal<br/><small>Carlos D. Rodríguez</small></div></div>
+          <div class="org-nivel">
+            <div class="org-box verde">Secretario<br/><small>Miguel A. Pérez</small></div>
+            <div class="org-box verde">Fiscal<br/><small>Aleyder Castañeda</small></div>
+            <div class="org-box verde">Tesorero<br/><small>Jorge Granados</small></div>
+          </div>
+          <div class="org-nivel"><div class="org-box amarillo">Mesa Técnicas</div></div>
+          <div class="org-nivel org-mesas">
+            <div class="org-box gris">Cultura<br/><small>Nayra Riaño</small></div>
+            <div class="org-box gris">Religiosos<br/><small>Martin Velandia</small></div>
+            <div class="org-box gris">Relaciones<br/><small>Jairo Palacios, Astrid Murillo, Joel Olmos</small></div>
+            <div class="org-box gris">Prensa<br/><small>Carolina Pérez</small></div>
+            <div class="org-box gris">Juventudes<br/><small>Víctor Largo, Pablo Pérez</small></div>
+            <div class="org-box gris">Org. Sociales<br/><small>Ariel Rojas</small></div>
+            <div class="org-box gris">Ingeniería<br/><small>Daniela Peña</small></div>
+            <div class="org-box gris">Historiador<br/><small>Pedro Nel Pinzón, Juan Grimaldo, Miguel Zarate</small></div>
+            <div class="org-box gris">Firmantes de Paz<br/><small>Wilmar Marín Cano y otros</small></div>
+            <div class="org-box gris">Comité la Mujer<br/><small>Luz Stella Pedraza</small></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="sec-contacto" class="seccion-panel">
+        <h2 class="seccion-titulo">Contáctanos</h2>
+        <div class="contacto-info">
+          <p>📍 Calle 15 No. 18-13 Ofc. 111 · Yopal, Casanare</p>
+          <p>📞 <a href="tel:3214503377">321 450 3377</a></p>
+          <p>💬 <a href="https://wa.me/573214503377" target="_blank">WhatsApp: +57 321 450 3377</a></p>
+          <p>✉️ <a href="mailto:reconciliacioncasanare@gmail.com">reconciliacioncasanare@gmail.com</a></p>
+          <p>👤 Yohany García · Representante Legal</p>
+          <div class="footer-redes">
+            <a href="https://www.facebook.com/share/19eRS6Ymhw/" target="_blank">📘 Facebook</a>
+            <a href="https://www.instagram.com" target="_blank">📷 Instagram</a>
+          </div>
+          <p class="footer-nit">NIT. 901939991-3</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="cerrarLightbox()">
+    <span id="lightbox-cerrar">&times;</span>
+    <img id="lightbox-img" src="" alt="Imagen ampliada" onclick="event.stopPropagation()" />
+  </div>
+
+  <script>
+    function mostrarSeccion(id, el) {
+      event.preventDefault();
+      document.querySelectorAll('.seccion-panel').forEach(s => s.classList.remove('activa'));
+      document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
+      document.getElementById('sec-' + id).classList.add('activa');
+      el.classList.add('active');
+    }
+    function abrirLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function cerrarLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.getElementById('lightbox-img').src = '';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') cerrarLightbox(); });
+  </script>
+
+</body>
+</html>
