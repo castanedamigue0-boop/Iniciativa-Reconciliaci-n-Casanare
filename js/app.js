@@ -34,3 +34,4 @@ function cerrarLightbox() {
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') cerrarLightbox();
 });
+

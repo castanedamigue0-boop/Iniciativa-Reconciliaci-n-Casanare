@@ -37,12 +37,14 @@
     <aside class="sidebar">
       <nav>
         <a href="#" class="nav-link active" onclick="mostrarSeccion('inicio', this)">🏠 Inicio</a>
+        <a href="#" class="nav-link" onclick="mostrarSeccion('cancion', this)">🎵 Canción Reflexión</a>
         <a href="#" class="nav-link" onclick="mostrarSeccion('nosotros', this)">👥 Nosotros</a>
         <a href="#" class="nav-link" onclick="mostrarSeccion('mision', this)">🎯 Misión y Visión</a>
         <a href="#" class="nav-link" onclick="mostrarSeccion('ejes', this)">⚡ 4 Ejes</a>
         <a href="#" class="nav-link" onclick="mostrarSeccion('alianzas', this)">🤝 Alianzas</a>
         <a href="#" class="nav-link" onclick="mostrarSeccion('acto', this)">🕊️ Acto Reconciliación</a>
         <a href="#" class="nav-link" onclick="mostrarSeccion('publicaciones', this)">📸 Publicaciones</a>
+        <a href="#" class="nav-link" onclick="mostrarSeccion('cancion', this)">🎵 Canción Reflexión</a>
         <a href="#" class="nav-link" onclick="mostrarSeccion('acciones', this)">📋 Acciones</a>
         <a href="#" class="nav-link" onclick="mostrarSeccion('organigrama', this)">🗂️ Organigrama</a>
         <a href="#" class="nav-link" onclick="mostrarSeccion('contacto', this)">📞 Contacto</a>
@@ -105,13 +107,36 @@
           <p>Iniciativa Reconciliación Casanare &mdash; NIT. 901939991-3</p>
           <p>Calle 15 N 18-13 Ofc. 111 · Yopal, Casanare</p>
           <div class="pie-redes">
-            <a href="https://www.facebook.com/share/19eRS6Ymhw/" target="_blank">📘 Facebook</a>
-            <a href="mailto:reconciliacioncasanare@gmail.com">✉️ reconciliacioncasanare@gmail.com</a>
-            <a href="https://wa.me/573214503377" target="_blank">💬 WhatsApp</a>
+            <a href="https://www.facebook.com/profile.php?id=61575063310965" target="_blank" class="pie-red">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/reconciliacioncasanare/?hl=es" target="_blank" class="pie-red">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="url(#ig2)"><defs><linearGradient id="ig2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/573214503377" target="_blank" class="pie-red">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            </a>
+            <a href="mailto:reconciliacioncasanare@gmail.com" class="pie-red">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#EA4335"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.548l8.073-6.055C21.69 2.28 24 3.434 24 5.457z"/></svg>
+            </a>
           </div>
           <p class="pie-copy">© 2025 IRC · Todos los derechos reservados</p>
         </footer>
 
+      </section>
+
+      <!-- ===== CANCIÓN REFLEXIÓN ===== -->
+      <section id="sec-cancion" class="seccion-panel">
+        <h2 class="seccion-titulo">🎵 Canción Reflexión</h2>
+        <div class="cancion-wrap">
+          <div class="cancion-icon">🎶</div>
+          <h3 class="cancion-titulo-texto">"Del Balazo, al Abrazo"</h3>
+          <p class="cancion-desc">Una canción que refleja el espíritu de reconciliación y paz de la Iniciativa Reconciliación Casanare.</p>
+          <audio id="audio-reflexion" controls class="cancion-player">
+            <source src="audio/WhatsApp Audio 2026-03-27 at 1.24.42 PM.mpeg" type="audio/mpeg" />
+            Tu navegador no soporta el reproductor de audio.
+          </audio>
+        </div>
       </section>
 
       <!-- ===== NOSOTROS ===== -->
@@ -345,7 +370,7 @@
         <div class="org-wrap">
           <div class="org-nivel">
             <div class="org-box verde">Director Ejecutivo<br/><small>Yohany García</small></div>
-            <div class="org-box gris">Asesora Contable<br/><small>Consuelo Niño</small></div>
+            <div class="org-box gris">Asesora Contable<br/><small>Consuelo Niño · Nixon Mora</small></div>
           </div>
           <div class="org-nivel"><div class="org-box naranja">Directiva</div></div>
           <div class="org-nivel">
@@ -370,6 +395,10 @@
             <div class="org-box gris">Historiador<br/><small>Pedro Nel Pinzón, Juan Grimaldo, Miguel Zarate</small></div>
             <div class="org-box gris">Firmantes de Paz<br/><small>Wilmar Marín Cano y otros</small></div>
             <div class="org-box gris">Comité la Mujer<br/><small>Luz Stella Pedraza</small></div>
+          </div>
+          <div class="org-nivel"><div class="org-box azul">Asesores</div></div>
+          <div class="org-nivel">
+            <div class="org-box gris">Asesores<br/><small>Doc. Ricardo Villamarín · Doc. David Emiro Sossa · Doc. Jorge Cortez · Doc. Javier Barragán · Doc. Willermo Ernesto Roldán</small></div>
           </div>
         </div>
       </section>
@@ -515,37 +544,53 @@
             <h3>ACC</h3>
             <div class="comandante">
               <span class="cmd-nombre">Héctor José Buitrago</span>
-              <span class="cmd-alias">alias "El Viejo"</span>
+              <span class="cmd-alias">conocido como "El Viejo"</span>
             </div>
             <div class="comandante">
               <span class="cmd-nombre">Héctor Germán Buitrago</span>
-              <span class="cmd-alias">alias "Martín Llanos"</span>
+              <span class="cmd-alias">conocido como "Martín Llanos"</span>
+            </div>
+            <div class="comandante">
+              <span class="cmd-nombre">Nelson Orlando Buitrago</span>
+              <span class="cmd-alias">conocido como "Caballo"</span>
             </div>
           </div>
           <div class="grupo-card auc">
             <h3>AUC</h3>
             <div class="comandante">
               <span class="cmd-nombre">Manuel de Jesús Pirabán</span>
-              <span class="cmd-alias">alias "Jorge Pirata"</span>
+              <span class="cmd-alias">conocido como "Jorge Pirata"</span>
             </div>
             <div class="comandante">
-              <span class="cmd-nombre">José Baldomero Linares</span>
-              <span class="cmd-alias">alias "Guillermo Torres"</span>
+              <span class="cmd-nombre">Orlando Mesa Melo</span>
+              <span class="cmd-alias">conocido como "Diego"</span>
+            </div>
+            <div class="comandante">
+              <span class="cmd-nombre">Melquecides Enao Siro</span>
+              <span class="cmd-alias">conocido como "Belisario"</span>
+            </div>
+            <div class="comandante">
+              <span class="cmd-nombre">Juan Manuel Tordecilla</span>
+              <span class="cmd-alias">conocido como "Cubano"</span>
+            </div>
+            <div class="comandante">
+              <span class="cmd-nombre">Wilian Mayorga</span>
+              <span class="cmd-alias">conocido como "Mayorga"</span>
             </div>
           </div>
           <div class="grupo-card bva">
             <h3>BVA</h3>
             <div class="comandante">
               <span class="cmd-nombre">Miguel Ángel Mejía</span>
-              <span class="cmd-alias">alias "Pablo"</span>
+              <span class="cmd-alias">conocido como "Pablo"</span>
             </div>
             <div class="comandante">
               <span class="cmd-nombre">José Luis Mejía</span>
-              <span class="cmd-alias">alias "Lucas"</span>
+              <span class="cmd-alias">conocido como "Lucas"</span>
             </div>
             <div class="comandante">
               <span class="cmd-nombre">Orlando Villa Zapata</span>
-              <span class="cmd-alias">alias "Rubén"</span>
+              <span class="cmd-alias">conocido como "Rubén"</span>
             </div>
           </div>
           <div class="grupo-card farc">
@@ -555,19 +600,19 @@
             </div>
             <div class="comandante">
               <span class="cmd-nombre">Wilmar Antonio Marín Cano</span>
-              <span class="cmd-alias">alias "Hugo 22"</span>
+              <span class="cmd-alias">conocido como "Hugo 22"</span>
             </div>
             <div class="comandante">
               <span class="cmd-nombre">Bernardo Mosquera Machado</span>
-              <span class="cmd-alias">alias "Negro Antonio"</span>
+              <span class="cmd-alias">conocido como "Negro Antonio"</span>
             </div>
             <div class="comandante">
               <span class="cmd-nombre">Nelson Quintero</span>
-              <span class="cmd-alias">alias "Angarilla"</span>
+              <span class="cmd-alias">conocido como "Angarilla"</span>
             </div>
             <div class="comandante">
               <span class="cmd-nombre">Arnulfo Ninco</span>
-              <span class="cmd-alias">alias "César"</span>
+              <span class="cmd-alias">conocido como "César"</span>
             </div>
           </div>
         </div>
@@ -577,16 +622,31 @@
       <section id="sec-contacto" class="seccion-panel">
         <h2 class="seccion-titulo">Contáctanos</h2>
         <div class="contacto-info">
-          <p>📍 Calle 15 No. 18-13 Ofc. 111 · Yopal, Casanare</p>
+          <p>📍 <span style="color:#1a5c2a; font-weight:600;">Calle 15 No. 18-13 Ofc. 111 · Yopal, Casanare</span></p>
           <p>📞 <a href="tel:3214503377">321 450 3377</a></p>
           <p>📞 <a href="tel:3238269972">323 826 9972</a></p>
-          <p>📞 <a href="tel:3107852178">310 785 2178</a></p>
-          <p>💬 <a href="https://wa.me/573214503377" target="_blank">WhatsApp: +57 321 450 3377</a></p>
-          <p>✉️ <a href="mailto:reconciliacioncasanare@gmail.com">reconciliacioncasanare@gmail.com</a></p>
-          <p>👤 Yohany García Mosquera · Representante Legal</p>
+          <p>
+            <a href="https://wa.me/573214503377" target="_blank" class="red-social">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              WhatsApp: +57 321 450 3377
+            </a>
+          </p>
+          <p>
+            <a href="mailto:reconciliacioncasanare@gmail.com" class="red-social">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#EA4335"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.548l8.073-6.055C21.69 2.28 24 3.434 24 5.457z"/></svg>
+              reconciliacioncasanare@gmail.com
+            </a>
+          </p>
+          <p><strong>Representante Legal:</strong> Yohany García Mosquera</p>
           <div class="footer-redes">
-            <a href="https://www.facebook.com/share/19eRS6Ymhw/" target="_blank">📘 Facebook</a>
-            <a href="https://www.instagram.com" target="_blank">📷 Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61575063310965" target="_blank" class="red-social">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+              Facebook
+            </a>
+            <a href="https://www.instagram.com/reconciliacioncasanare/?hl=es" target="_blank" class="red-social">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="url(#ig)"><defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              Instagram
+            </a>
           </div>
           <p class="footer-nit">NIT. 901939991-3 · Inscripción No. S0505308</p>
         </div>
